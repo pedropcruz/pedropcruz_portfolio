@@ -3,6 +3,7 @@ import AboutCSS from "./About.css";
 import InputNameVisitor from '../components/About/InputNameVisitor';
 import InputShowAndAboutMe from "../components/About/InputShowAndAboutMe";
 
+const localStorageVariableName = "pedropcruz_inputvalue";
 
 export default class About extends Component {
 
@@ -15,38 +16,62 @@ export default class About extends Component {
             about: "",
             inputValue: "",
             valueName: "",
-            _showForm: true
+            _showForm: true,
+            animateClass: ' fadeInDown'
         };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleValue = this.handleValue.bind(this);
     }
 
     componentWillMount() {
-        const show = localStorage.getItem('nameValue') === null;
+        const show = localStorage.getItem(localStorageVariableName) !== null;
         this.setState({
             name: this.props.name,
             role: this.props.role,
             about: this.props.text,
-            valueName: localStorage.getItem('nameValue') || "",
-            _showForm: show
+            valueName: localStorage.getItem(localStorageVariableName) || "",
+            _showForm: show,
         });
-
-        this.getComponent = this.getComponent.bind(this);
     }
 
-    getComponent = () => {
-        if (this.state._showForm) {
-            return <InputNameVisitor inputValue={this.state.valueName}
-                                     _showForm={this.state._showForm}/>;
-        } else {
-            return <InputShowAndAboutMe role={this.state.role}
-                              name={this.state.name}
-                              about={this.state.about}/>
+    handleSubmit = (e) =>{
+        if(e.key === 'Enter' ){
+            localStorage.setItem(localStorageVariableName, this.state.inputValue);
+
+            this.setState({
+                inputValue: this.props.inputValue,
+                animateClass: ' fadeInDown',
+                _showForm: this.props._showForm
+            });
+
+            console.log(this.props);
+            console.log(this.state);
+
+            e.preventDefault();
         }
+    };
+
+    handleValue = (e) =>{
+        this.setState({
+            inputValue: e.target.value
+        });
     };
 
     render() {
         return (
             <AboutCSS className="relative block">
-                {this.getComponent()}
+                <InputNameVisitor inputValue={this.state.valueName}
+                                  _showForm={this.state._showForm}
+                                  handleSubmit={this.handleSubmit}
+                                  handleValue={this.handleValue}
+                                  animateClass={this.state.animateClass}/>
+                <InputShowAndAboutMe role={this.state.role}
+                                     name={this.state.name}
+                                     about={this.state.about}
+                                     valueName={this.state.valueName}
+                                     _showForm={this.state._showForm}
+                                     animateClass={this.state.animateClass}/>
                 <div className="socialLinks relative mt4">
                     <ul className="list-reset mx-auto center right-align mt4">
                         <li className="inline-block"><a className="mx4" href="/">resume</a></li>

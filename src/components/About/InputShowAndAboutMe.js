@@ -5,12 +5,16 @@ export default class InputShowAndAboutMe extends Component{
         super(props);
 
         this.state = {
-            name: "",
-            role: [],
-            about: "",
-            valueName: localStorage.getItem('nameValue') || "",
-            _showForm: localStorage.getItem('nameValue') === null
+            roles : this.props.role,
+            inputValue: this.props.inputValue,
+            name: this.props.name,
+            about: this.props.about,
+            valueName: this.props.valueName,
+            _showForm: this.props._showForm,
+            animateClass: ' fadeInDown'
         };
+
+        console.log(this.state);
 
         this.showRoles = this.showRoles.bind(this);
     }
@@ -21,24 +25,15 @@ export default class InputShowAndAboutMe extends Component{
         ));
     };
 
-    componentWillMount() {
-        this.setState({
-            name: this.props.name,
-            role: this.props.role,
-            about: this.props.about,
-            valueName: localStorage.getItem('nameValue') || "",
-        });
-    }
-
     render() {
         return (
-            <div className={!this.state.valueName ? 'changedName display-none' : 'changedName animated fadeInDown'}>
+        <div className={!this.state._showForm ? 'changedName display-none' : 'changedName animated' + this.state.animateClass}>
                 <h1 className="h1 mt4 center relative mx-auto caps">Hello, {this.state.valueName}!</h1>
                 <div className="relative clearfix">
                     <article className="col-6 py3 px4 col-right">
                         <h1 className="name caps">I'm {this.state.name}</h1>
                         <div className="relative mt1 mb3">
-                            {this.showRoles(this.state.role)}
+                            {this.showRoles(this.state.roles)}
                         </div>
                         <p className="text">{this.state.about}</p>
                     </article>
