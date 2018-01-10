@@ -45,9 +45,6 @@ export default class About extends Component {
                 _showForm: this.props._showForm
             });
 
-            console.log(this.props);
-            console.log(this.state);
-
             e.preventDefault();
         }
     };

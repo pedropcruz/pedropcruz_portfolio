@@ -17,7 +17,6 @@ export default class ProjectsSection extends Component {
 
     mapItems = () => {
         const data = this.state.data;
-        console.log(this.state.data);
         return data.map((item) => (
             <ProjectItem key={item._id}
                          projectNumber={item.number}
