@@ -14,8 +14,6 @@ export default class InputShowAndAboutMe extends Component{
             animateClass: ' fadeInDown'
         };
 
-        console.log(this.state);
-
         this.showRoles = this.showRoles.bind(this);
     }
 
