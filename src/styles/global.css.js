@@ -16,7 +16,7 @@ function fontFace(name, src, fontDir) {
 
 injectGlobal`
   
-    ${fontFace("Montserrat", "Montserrat", "Montserrat-SemiBold")};
+    ${fontFace("Montserrat", "Montserrat", "Montserrat-Bold")};
     ${fontFace("Raleway", "Raleway", "Raleway-Regular")};
     ${fontFace("MontserratM", "Montserrat", "Montserrat-Medium")};
     
