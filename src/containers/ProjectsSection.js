@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ProjectSectionCSS from './ProjectsSection.css';
 import projectsJson from '../resources/projects';
 import ProjectItem from "../components/ProjectsSection/ProjectItem";
 
@@ -30,9 +29,9 @@ export default class ProjectsSection extends Component {
 
     render() {
         return (
-            <ProjectSectionCSS className="relative">
+            <section className="relative max-width-4 mx-auto my4">
                 {this.mapItems()}
-            </ProjectSectionCSS>
+            </section>
         );
     }
 }
