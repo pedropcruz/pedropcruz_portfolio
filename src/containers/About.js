@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import AboutCSS from "./About.css";
 import InputNameVisitor from '../components/About/InputNameVisitor';
 import InputShowAndAboutMe from "../components/About/InputShowAndAboutMe";
+import SocialLinks from "../components/SocialLinks/SocialLinks";
 
 const localStorageVariableName = "pedropcruz_inputvalue";
 
@@ -41,6 +42,7 @@ export default class About extends Component {
 
             this.setState({
                 inputValue: this.props.inputValue,
+                valueName: this.props.valueName,
                 animateClass: ' fadeInDown',
                 _showForm: this.props._showForm
             });
@@ -69,18 +71,7 @@ export default class About extends Component {
                                      valueName={this.state.valueName}
                                      _showForm={this.state._showForm}
                                      animateClass={this.state.animateClass}/>
-                <div className="socialLinks relative mt4">
-                    <ul className="list-reset mx-auto center right-align mt4">
-                        <li className="inline-block"><a className="mx4" href="/">resume</a></li>
-                        <li className="inline-block"><a className="mx4" href="/">facebook</a></li>
-                        <li className="inline-block"><a className="mx4" href="/">twitter</a></li>
-                        <li className="inline-block"><a className="mx4" href="/">instagram</a></li>
-                        <li className="inline-block"><a className="mx4" href="/">behance</a></li>
-                        <li className="inline-block"><a className="mx4" href="/">github</a></li>
-                        <li className="inline-block"><a className="mx4" href="/">dribbble</a></li>
-                    </ul>
-                    <span className="scroll caps top-0 absolute">scroll</span>
-                </div>
+                <SocialLinks newClass="right-align" />
             </AboutCSS>
         )
     }

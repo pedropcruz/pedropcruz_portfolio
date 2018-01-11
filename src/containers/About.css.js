@@ -58,6 +58,7 @@ const AboutCSS = styled.section`
       }
     }
     a{
+      color: ${variables.colors.primaryColor};
       text-decoration: none;
       &:focus{
         outline: 0;
