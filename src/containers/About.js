@@ -71,7 +71,7 @@ export default class About extends Component {
                                      valueName={this.state.valueName}
                                      _showForm={this.state._showForm}
                                      animateClass={this.state.animateClass}/>
-                <SocialLinks newClass="right-align" />
+                <SocialLinks newclass="right-align" />
             </AboutCSS>
         )
     }
