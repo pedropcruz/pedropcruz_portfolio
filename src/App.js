@@ -3,6 +3,8 @@ import Header from "./containers/Header";
 import About from './containers/About';
 import ProjectsSection from "./containers/ProjectsSection";
 import Footer from './containers/Footer';
+import OverlayMenu from "./containers/OverlayMenu";
+import OverlayMenuCSS from "./containers/OverlayMenu.css";
 
 class App extends Component {
     render() {
@@ -19,6 +21,9 @@ class App extends Component {
                 <About name="Pedro Cruz" role={roles} text={aboutText.text}/>
                 <ProjectsSection/>
                 <Footer/>
+                <OverlayMenuCSS className="fixed top-0 right-0 left-0 bottom-0 display-none sm-hide md-hide lg-hide">
+                    <OverlayMenu moreclass="sm-hide md-hide lg-hide" button={true}/>
+                </OverlayMenuCSS>
             </section>
         );
     }
