@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import data from '../../resources/socialLinks.json';
+import data from '../../resources/SocialLinks';
 
 
 export default class SocialLinks extends Component {
@@ -21,7 +21,7 @@ export default class SocialLinks extends Component {
     };
 
     render() {
-        const classNames = "list-reset mx-auto center right-align mt4 ";
+        const classNames = "list-reset mx-auto center mt4 ";
         return (
             <div className="socialLinks relative mt4">
                 <ul className={this.state.newclass ? classNames + this.state.newclass : classNames}>
