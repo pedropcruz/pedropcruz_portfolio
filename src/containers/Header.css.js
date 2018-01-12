@@ -4,7 +4,12 @@ import {lighten} from 'polished';
 
 export const HeaderCSS = styled.nav`
   img{
-    width: 200px;
+    width: 60px;
+  }
+  .xs-hide{
+    img{
+      width: 200px;
+    }
   }
   ul.list-reset{
     li{
@@ -30,6 +35,18 @@ export const HeaderCSS = styled.nav`
           }
         }
       }
+    }
+  }
+  button{
+    background: transparent;
+    border: 0;
+    width: 30px;
+    &:hover{
+      cursor: pointer;
+    }
+    span{
+      height: ${variables.value.bv0};
+      background: ${variables.colors.primaryColor};
     }
   }
 `;
