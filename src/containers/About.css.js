@@ -4,7 +4,7 @@ import variables from "../styles/variables.css";
 const AboutCSS = styled.section`
   color: ${variables.colors.primaryColor};
   h1{
-    margin-top: 2rem;
+    margin-top: 6rem;
     font:900 1.3em/2em ${variables.fonts.Montserrat};
     @media ${variables.media.sm}{
       margin-top: 4rem;
@@ -32,6 +32,7 @@ const AboutCSS = styled.section`
   }
   article{
   text-align: center;
+  padding: 4rem 2rem; 
     @media ${variables.media.sm}{
       text-align: left;
     }
@@ -60,7 +61,7 @@ const AboutCSS = styled.section`
     span.scroll{
       left:0;
       right:0;
-      top:50%;
+      top:30%;
       font: 900 1.2em/1.4em ${variables.fonts.Montserrat};
       text-decoration: none;
       transform: rotate(90deg);

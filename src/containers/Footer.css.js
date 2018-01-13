@@ -13,7 +13,10 @@ const FooterCSS = styled.section`
     a{
       text-decoration: none;
       color: ${variables.colors.secondaryColor};
-      font: 900 2.4em/1em ${variables.fonts.Montserrat};
+      font: 900 1.5em/1.6em ${variables.fonts.Montserrat};
+      @media ${variables.media.sm}{
+        font: 900 2.4em/1em ${variables.fonts.Montserrat};
+      }
     }
   }
   .socialLinks{
