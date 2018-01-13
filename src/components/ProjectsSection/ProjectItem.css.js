@@ -2,36 +2,87 @@ import styled from 'styled-components';
 import variables from "../../styles/variables.css";
 
 const ProjectItemCSS = styled.article `
-    margin-top: 10rem;
-    height: 420px;
-    border: ${variables.value.bv5} solid ${variables.colors.primaryColor}; 
+    margin: 8rem 2rem;
+    height: 300px;
+    border: ${variables.value.bv3} solid ${variables.colors.primaryColor};
+    @media ${variables.media.sm}{
+      height: 420px;
+      margin-top: 10rem;
+      border: ${variables.value.bv5} solid ${variables.colors.primaryColor};
+    } 
   .project-item{
     &--number{
       font: 900 2em/2em ${variables.fonts.Montserrat};
       color: ${variables.colors.primaryColor};
-      border: ${variables.value.bv3} solid ${variables.colors.primaryColor}
+      border: ${variables.value.bv3} solid ${variables.colors.primaryColor};
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+      @media ${variables.media.sm}{
+        position: relative;
+        left: unset;
+        transform: translate(0);
+      }
     }
     &--image{
-      top: ${variables.value.bv10};
-      right: -12rem;
+      text-align: center;
+      top: -6rem;
+      right: 0;
+      left:0;
+      @media ${variables.media.sm}{
+        left: unset;
+        top: ${variables.value.bv10};
+        right: -10%;
+      }
+      @media ${variables.media.md}{
+        right: -5%;
+      }
+      @media ${variables.media.lg}{
+        right: -10%;
+      }
       img{
-        max-width: 500px;
+        width: 100%;
+        max-width: 250px;
+        @media ${variables.media.sm}{
+          max-width:350px;
+        }
+        @media ${variables.media.lg}{
+          max-width:500px;
+        }
       }
     }
     &--details {
       width:100%;
-      bottom: 4rem;
+      left:0;
+      bottom: 1rem;
       color: ${variables.colors.primaryColor};
+      text-align: center;
+      @media ${variables.media.sm}{
+        bottom: 4rem;
+        left: unset;
+        text-align: left;
+      }
       &__name {
-        font: 900 1.4em/3em ${variables.fonts.Montserrat};
+        font: 900 .8em/2em ${variables.fonts.Montserrat};
+        @media ${variables.media.sm}{
+          font: 900 1.4em/3em ${variables.fonts.Montserrat};        
+        }
       }
       &__lead{
+        width: 100%;
         font: 400 1em/1.5em ${variables.fonts.Raleway};
+        @media ${variables.media.sm}{
+          width: 58.33333%;
+        }
       }
       &__linkProject{
         width: 4rem;
+        margin: 3em auto;
         height: ${variables.value.bv1};
         background: ${variables.colors.primaryColor};
+        @media ${variables.media.sm}{
+          margin:2rem 0 0 0;
+        }
       }
     }
   }
