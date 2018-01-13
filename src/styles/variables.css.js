@@ -21,6 +21,11 @@ const variables = {
         Montserrat: "Montserrat",
         Raleway: "Raleway",
         MontserratMedium: "MontserratM"
+    },
+    media: {
+        sm: '(min-width: 40em)',
+        md: '(min-width: 52em)',
+        lg: '(min-width: 64em)'
     }
 };
 
