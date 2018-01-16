@@ -33,10 +33,14 @@ export default class BackgroundAnimated extends Component {
     for (let i = 0; i < num; i++) {
       let type = solidType[this.RandomNumber(0, solidType.length - 1)];
 
+      let wh = this.RandomNumber(40, 80) + 'px'; 
+
       let style = {
         top: this.RandomNumber(100, window.innerHeight - 100) + "px",
         left: this.RandomNumber(100, window.innerWidth - 100) + "px",
-        transform: "rotate(" + this.RandomNumber(0, 360) + "deg"
+        transform: "rotate(" + this.RandomNumber(0, 360) + "deg",
+        width: wh,
+        height: wh
       };
 
       let div = document.createElement("div");
