@@ -6,7 +6,7 @@ import Navigation from "../components/Header/Navigation";
 export default class Header extends Component{
     render(){
         return(
-            <HeaderCSS className="relative my3 mx4 flex justify-between items-center">
+            <HeaderCSS className="relative py3 px4 flex justify-between items-center">
                 <Logo/>
                 <Navigation/>
             </HeaderCSS>
