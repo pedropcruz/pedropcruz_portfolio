@@ -7,15 +7,19 @@ const AboutCSS = styled.section`
     margin-top: 6rem;
     font: 900 1.3em/2em ${variables.fonts.Montserrat};
     @media ${variables.media.sm} {
-      margin-top: 4rem;
+      margin-top: 2rem;
       font: 900 3em/1.7em ${variables.fonts.Montserrat};
     }
   }
   form {
     min-height: 385px;
+    text-align: center;
     h1 {
-      font-size: 1.8em;
+      font-size: 1.2em;
       letter-spacing: 0;
+      @media ${variables.media.sm} {
+        font-size: 1.8em;
+      }
     }
     input {
       color: ${variables.colors.primaryColor};
@@ -41,7 +45,6 @@ const AboutCSS = styled.section`
       letter-spacing: 0;
       @media ${variables.media.sm} {
         font-size: 3em;
-        margin-top: 2rem;
       }
     }
     h2.role {

@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import Square from '../../resources/square.svg';
 import Hexagon from '../../resources/hexagon.svg';
 import Cross from '../../resources/cross.svg';
