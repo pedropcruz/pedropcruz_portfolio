@@ -16,7 +16,7 @@ export default class SocialLinks extends Component {
   socialData(data) {
     return data.map((item, i) => (
       <li key={item.name + "__" + i} className="inline-block">
-        <a className="mx4" href={item.url} target="_blank">
+        <a className="mx4" href={item.url} to={item.url} target="_blank">
           {item.name}
         </a>
       </li>

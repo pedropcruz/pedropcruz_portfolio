@@ -1,7 +1,7 @@
 import {injectGlobal} from 'styled-components';
 import variables from './variables.css';
 import './reset.css';
-import 'basscss/css/basscss.min.css'
+import 'basscss/css/basscss.min.css';
 
 function fontFace(name, src, fontDir) {
     return `

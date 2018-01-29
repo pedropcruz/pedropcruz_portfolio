@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import AboutCSS from "./About.css";
-import InputNameVisitor from "../components/About/InputNameVisitor";
-import InputShowAndAboutMe from "../components/About/InputShowAndAboutMe";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
+import InputNameVisitor from "../../components/About/InputNameVisitor";
+import InputShowAndAboutMe from "../../components/About/InputShowAndAboutMe";
+import SocialLinks from "../../components/SocialLinks/SocialLinks";
 
 const localStorageVariableName = "pedropcruz_inputvalue";
 

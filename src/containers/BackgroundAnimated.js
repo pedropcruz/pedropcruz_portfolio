@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import BackgroundAnimatedCSS from "../components/BackgroundAnimated/BackgroundAnimated.css";
 
 const solidType = ["hexagon", "triangle", "cross", "square"];
-const num = 80;
+const num = 50;
 
 export default class BackgroundAnimated extends Component {
   constructor(props) {

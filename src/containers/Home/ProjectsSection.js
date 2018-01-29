@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import projectsJson from '../resources/Projects';
-import ProjectItem from "../components/ProjectsSection/ProjectItem";
+import projectsJson from '../../resources/Projects.json';
+import ProjectItem from "../../components/ProjectsSection/ProjectItem";
 
 
 export default class ProjectsSection extends Component {

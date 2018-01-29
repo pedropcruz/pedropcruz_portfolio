@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import variables from "../styles/variables.css";
+import variables from "../../styles/variables.css";
 
 const AboutCSS = styled.section`
   color: ${variables.colors.primaryColor};

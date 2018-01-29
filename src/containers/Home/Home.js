@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import Header from "./containers/Header";
-import About from "./containers/About";
-import ProjectsSection from "./containers/ProjectsSection";
-import Footer from "./containers/Footer";
-import OverlayMenu from "./containers/OverlayMenu";
-import OverlayMenuCSS from "./containers/OverlayMenu.css";
-import BackgroundAnimated from "./containers/BackgroundAnimated";
+import Header from '../Header';
+import About from '../About';
+import ProjectsSection from '../ProjectsSection';
+import Footer from '../Footer';
+import OverlayMenuCSS from '../OverlayMenu.css';
+import OverlayMenu from '../OverlayMenu';
+import BackgroundAnimated from '../BackgroundAnimated';
 import roles from './resources/roles';
 
-class App extends Component {
+export default class Home extends Component {
   render() {
     const aboutText = {
       text:
@@ -33,5 +33,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
