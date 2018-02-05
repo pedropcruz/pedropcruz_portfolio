@@ -20,7 +20,7 @@
     "name": "Jah Moment Portugal",
     "url": "/jahmoment",
     "images": {
-      "big": "../img/sporting/sporting_big.png",
+      "big": "../img/jahmoment/jahmoment_big.png",
       "medium": "cenasMEDIUM.jpg",
       "small": "cenasSMALL.jpg",
       "logo": "cenasLOGO.jpg"
@@ -35,7 +35,7 @@
     "name": "itzone",
     "url": "/itzone",
     "images": {
-      "big": "../img/sporting/sporting_big.png",
+      "big": "../img/itzone/itzone_big.png",
       "medium": "cenasMEDIUM.jpg",
       "small": "cenasSMALL.jpg",
       "logo": "cenasLOGO.jpg"

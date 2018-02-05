@@ -1,0 +1,40 @@
+[
+    {
+        "name": "KCSIT Project Management, Lda",
+        "from": "02.2015",
+        "to": "04.2016",
+        "courses":[
+            "Android Development",
+            "iOS Development",
+            "HTML5-CSS3-Javascript",
+            "SCRUM",
+            "Javascript Development",
+            "Presentation Techniques and Meetings Management",
+            "Web-apps Security"
+        ]
+    },
+    {
+        "name": "Alphappl, Lda",
+        "from": "02.2014",
+        "to": "05.2014",
+        "courses":[
+            "Be a Developer"
+        ]
+    },
+    {
+        "name": "Restart",
+        "from": "2012",
+        "to": "2013",
+        "courses":[
+            "Graphic Design Skills"
+        ]
+    },
+    {
+        "name": "IPS-EST",
+        "from": "2009",
+        "to": "2011",
+        "courses":[
+            "Computer Science and Engineering"
+        ]
+    }
+]

@@ -5,12 +5,10 @@ import Cross from '../../resources/cross.svg';
 import Triangle from '../../resources/triangle.svg';
 
 const BackgroundAnimatedCSS = styled.div`
-    opacity: .2;
+    opacity: .1;
     z-index: 0;
     div{
         position: absolute;
-        width: 30px;
-        height: 30px;
         &.hexagon{
             background-image: url(${Hexagon});
             background-size: 100% 100%;
@@ -32,6 +30,8 @@ const BackgroundAnimatedCSS = styled.div`
         }
     }
 `;
+
+
 
 
 

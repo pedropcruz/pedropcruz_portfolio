@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import BackgroundAnimatedCSS from "../components/BackgroundAnimated/BackgroundAnimated.css";
 
 const solidType = ["hexagon", "triangle", "cross", "square"];
-const num = 80;
+const num = 50,
+      minSize = 20, maxSize = 60;
 
 export default class BackgroundAnimated extends Component {
   constructor(props) {
@@ -33,10 +34,14 @@ export default class BackgroundAnimated extends Component {
     for (let i = 0; i < num; i++) {
       let type = solidType[this.RandomNumber(0, solidType.length - 1)];
 
+      let wh = this.RandomNumber(minSize, maxSize) + 'px'; 
+
       let style = {
         top: this.RandomNumber(100, window.innerHeight - 100) + "px",
         left: this.RandomNumber(100, window.innerWidth - 100) + "px",
-        transform: "rotate(" + this.RandomNumber(0, 360) + "deg"
+        transform: "rotate(" + this.RandomNumber(0, 360) + "deg",
+        width: wh,
+        height: wh
       };
 
       let div = document.createElement("div");
