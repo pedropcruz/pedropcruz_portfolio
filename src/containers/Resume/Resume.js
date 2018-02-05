@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
-import Skills from "./Skills";
-import Timeline from "./Timeline";
+import Skills from "../../components/Resume/Skills";
+import Timeline from "../../components/Resume/Timeline";
 import BackgroundAnimated from '../BackgroundAnimated';
 
 export default class Resume extends Component {
@@ -11,7 +11,7 @@ export default class Resume extends Component {
       <section className="relative overflow-hidden z1">
         <div className="relative z4">
           <Header />
-          <section className="relative max-width-4 clearfix mx-auto">
+          <section className="relative clearfix mx4">
             <Timeline/>
             <Skills/>
           </section>

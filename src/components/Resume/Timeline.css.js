@@ -32,6 +32,9 @@ const TimelineCSS = styled.div`
           }
       }
     }
+    &__grid{
+      height: 800px;
+    }
   }
 `;
 

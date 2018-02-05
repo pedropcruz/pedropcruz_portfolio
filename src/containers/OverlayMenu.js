@@ -13,43 +13,48 @@ export default class OverlayMenu extends Component {
     this.closeButton = this.closeButton.bind(this);
   }
 
-  closeButton = () => {
+  closeButton() {
     console.log("click!");
-  };
+  }
 
   render() {
     const classesForNavigation = "list-reset block right ";
     return (
-        <ul
-          className={
-            this.state.class
-              ? classesForNavigation + this.state.class
-              : classesForNavigation
-          }
-        >
-          {this.state.addButton ? (
-            <li className="inline-block mx2">
-              <a className="close relative mx-auto block mb4" onClick={this.closeButton}> </a>
-            </li>
-          ) : (
-            ""
-          )}
+      <ul
+        className={
+          this.state.class
+            ? classesForNavigation + this.state.class
+            : classesForNavigation
+        }
+      >
+        {this.state.addButton ? (
           <li className="inline-block mx2">
-            <Link to="/resume" data-hover="Resumé">
-              Resumé
-            </Link>
+            <a
+              className="close relative mx-auto block mb4"
+              onClick={this.closeButton}
+            >
+              {" "}
+            </a>
           </li>
-          <li className="inline-block mx2">
-            <Link to="/projects" data-hover="Projects">
-              Projects
-            </Link>
-          </li>
-          <li className="inline-block mx2">
-            <Link to="/contact" data-hover="Contact">
-              Contact
-            </Link>
-          </li>
-        </ul>        
+        ) : (
+          ""
+        )}
+        <li className="inline-block mx2">
+          <Link to="/resume" data-hover="Resume">
+            Resume
+          </Link>
+        </li>
+        <li className="inline-block mx2">
+          <Link to="/projects" data-hover="Projects">
+            Projects
+          </Link>
+        </li>
+        <li className="inline-block mx2">
+          <Link to="/contact" data-hover="Contact">
+            Contact
+          </Link>
+        </li>
+      </ul>
     );
   }
 }

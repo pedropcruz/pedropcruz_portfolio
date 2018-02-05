@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TimelineCSS from "./Timeline.css";
-import Logo from "../../logo.svg";
+import Logo from "../../resources/me.svg";
 
 export default class Timeline extends Component {
   render() {
@@ -25,6 +25,11 @@ export default class Timeline extends Component {
           <a className="btn p2 inline-block" href="/">
             Download CV as PDF
           </a>
+        </div>
+        <div className="clearfix timeline__grid">
+          <div className="col col-12">
+            
+          </div>
         </div>
       </TimelineCSS>
     );
