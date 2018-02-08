@@ -18,6 +18,7 @@ injectGlobal`
   
     ${fontFace("Montserrat", "Montserrat", "Montserrat-Bold")};
     ${fontFace("Raleway", "Raleway", "Raleway-Regular")};
+    ${fontFace("RalewayI", "Raleway", "Raleway-Italic")}
     ${fontFace("MontserratM", "Montserrat", "Montserrat-Medium")};
     
     html, body{

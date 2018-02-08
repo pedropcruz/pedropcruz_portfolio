@@ -52,21 +52,22 @@ export default class Skills extends Component {
 
   render() {
     return (
-      <SkillsCSS className="col col-4 skills">
+      <SkillsCSS className="col col-4 skills relative">
         <div className="skills__education">
-          <h1 className="h1">Education</h1>
+          <h1 className="h1 mb2">Education</h1>
           {this.insertEducationData(EducationDATA)}
         </div>
         <div className="skills__profficiency">
-          <h1 className="h1">Profficiency</h1>
+          <h1 className="h1 mb2 ">Profficiency</h1>
+          <h4 className="h4 inline-block">1 - 10 Evaluation</h4>
           {this.insertProfficiencyData(ProfficiencyDATA)}
         </div>
         <div className="skills__technical">
-          <h1 className="h1">Technical Skills</h1>
+          <h1 className="h1 mb2">Technical Skills</h1>
           {this.insertSkillsAndInterestsData(SkillsAndInterestsDATA, true)}
         </div>
         <div className="skills__interests">
-          <h1 className="h1">Interests</h1>
+          <h1 className="h1 mb2">Interests</h1>
           {this.insertSkillsAndInterestsData(SkillsAndInterestsDATA, false)}
         </div>
       </SkillsCSS>

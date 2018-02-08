@@ -20,7 +20,8 @@ const variables = {
     fonts: {
         Montserrat: "Montserrat",
         Raleway: "Raleway",
-        MontserratMedium: "MontserratM"
+        MontserratMedium: "MontserratM",
+        RalewayItalic: "RalewayI"
     },
     media: {
         sm: '(min-width: 40em)',

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "role": "Junior Software Developer",
+    "from": "06-2014",
+    "to": "09-2014",
+    "company": "CDSI",
+    "url": "https://www.ibroker-software.pt"
+  },
+  {
+    "id": "2",
+    "role": "Junior Software Developer",
+    "from": "10-2014",
+    "to": "01-2015",
+    "company": "Viatecla",
+    "url": "https://www.viatecla.pt"
+  },
+  {
+    "id": "3",
+    "role": "Junior Consultant",
+    "from": "02-2015",
+    "to": "04-2016",
+    "company": "KCSIT Project Management, Lda",
+    "url": "https://www.kcsit.pt"
+  },
+  {
+    "id": "4",
+    "role": "Front-End Developer",
+    "from": "05-2016",
+    "to": "PRESENT",
+    "company": "Grupo Impresa Publishing, Lda",
+    "url": "https://www.impresa.pt"
+  }
+]

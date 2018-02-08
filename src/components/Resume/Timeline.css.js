@@ -32,8 +32,56 @@ const TimelineCSS = styled.div`
           }
       }
     }
-    &__grid{
-      height: 800px;
+    &__graph{
+      display: inline-block;
+      height: 100%;
+      width: 10px;
+      background: ${variables.colors.primaryColor};
+      margin: ${variables.value.bv11} 0;
+      &--year{
+        overflow: hidden;
+        position: relative;
+        color: ${variables.colors.primaryColor};
+        position: relative;
+        width: 700px;
+        h1{
+          margin: calc(${300 / 12 * 4 + 'px'} - 30px) 0 0 0;
+          padding-bottom: 20px;
+          position: relative;
+          display: block;
+          width: 500px;
+          text-align: right;
+          font:900 ${variables.value.bv5}/${variables.value.bv4} ${variables.fonts.Montserrat};
+          &:after{
+            content: "";
+            position: absolute;
+            left:0;
+            bottom:0;
+            right: 0;
+            width: 100%;
+            height: 10px;
+            background: ${variables.colors.primaryColor};
+          }
+        }
+        &_month{
+          display: block;
+          width: 0;
+          height: 0;
+          background: ${variables.colors.primaryColor};
+          &:nth-child(3n),
+          &:first-of-type{
+            margin-top: calc(${300 / 12 * 4 + 'px'} - 10px); 
+            width: 200px;
+            height: 10px;
+          }
+          &[data-present="true"]{
+            margin:0;
+          }
+        }
+      }
+      &--markup{
+        
+      }
     }
   }
 `;
