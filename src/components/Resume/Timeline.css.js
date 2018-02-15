@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import variables from "../../styles/variables.css";
 
+const heightYearMarkups = 500;
+
 const TimelineCSS = styled.div`
   .timeline {
     &__image {
@@ -33,10 +35,9 @@ const TimelineCSS = styled.div`
       }
     }
     &__graph{
-      display: inline-block;
-      height: 100%;
-      width: 10px;
-      background: ${variables.colors.primaryColor};
+      position: relative;
+      display: block;
+      border-left: 10px solid ${variables.colors.primaryColor};
       margin: ${variables.value.bv11} 0;
       &--year{
         overflow: hidden;
@@ -45,13 +46,12 @@ const TimelineCSS = styled.div`
         position: relative;
         width: 700px;
         h1{
-          margin: calc(${300 / 12 * 4 + 'px'} - 30px) 0 0 0;
-          padding-bottom: 20px;
+          padding: ${heightYearMarkups/12 + 'px'} 0;
           position: relative;
           display: block;
           width: 500px;
           text-align: right;
-          font:900 ${variables.value.bv5}/${variables.value.bv4} ${variables.fonts.Montserrat};
+          font:900 ${variables.value.bv5}/${heightYearMarkups/12 + 'px'} ${variables.fonts.Montserrat};
           &:after{
             content: "";
             position: absolute;
@@ -64,23 +64,63 @@ const TimelineCSS = styled.div`
           }
         }
         &_month{
+          position: relative;
           display: block;
           width: 0;
-          height: 0;
-          background: ${variables.colors.primaryColor};
-          &:nth-child(3n),
-          &:first-of-type{
-            margin-top: calc(${300 / 12 * 4 + 'px'} - 10px); 
-            width: 200px;
-            height: 10px;
+          height: ${heightYearMarkups/12 + 'px'};
+          &:nth-child(3n){
+          width: 200px;
+            &:after{
+              content: "";
+              position: absolute;
+              display: block;
+              bottom: 0;
+              left:0;
+              width: 100%;
+              height: 10px;
+              box-shadow: inset 0 0 200px ${variables.colors.primaryColor};
+            }
           }
           &[data-present="true"]{
             margin:0;
           }
         }
       }
-      &--markup{
-        
+      &--markups{
+        position: absolute;
+        right:0;
+        bottom: ${(props => props.geth1ElementHeight + (heightYearMarkups/12)*6)}px;
+        &__job{
+          position: relative;
+          border-left: 10px dashed ${variables.colors.primaryColor};
+          &:after{
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            transform: translate(-75%, -50%) rotate(45deg);
+            background: ${variables.colors.secondaryColor};
+            border: 8px solid ${variables.colors.primaryColor};
+            top: 50%;
+            left:0;
+          }
+          &:nth-child(3){
+            justify-content: normal !important;
+          }
+          h1{
+            font: 900 ${variables.value.bv5}/${variables.value.bv6} ${variables.fonts.Montserrat};
+            color: ${variables.colors.primaryColor};
+          }
+          p{
+            font: 900 ${variables.value.bv3}/${variables.value.bv4} ${variables.fonts.Montserrat};
+            color: ${variables.colors.primaryColor};
+          }
+          a{
+            text-decoration: none;
+            font: 400 ${variables.value.bv3}/${variables.value.bv4} ${variables.fonts.Raleway};
+            color: ${variables.colors.primaryColor};
+          }
+        }
       }
     }
   }
