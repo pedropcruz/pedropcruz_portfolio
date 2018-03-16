@@ -44,7 +44,8 @@ export default class OverlayMenu extends Component {
             Resume
           </Link>
         </li>
-        <li className="inline-block mx2">
+          {/*TODO: New Components for these pages in the future*/}
+        {/*<li className="inline-block mx2">
           <Link to="/projects" data-hover="Projects">
             Projects
           </Link>
@@ -53,7 +54,7 @@ export default class OverlayMenu extends Component {
           <Link to="/contact" data-hover="Contact">
             Contact
           </Link>
-        </li>
+        </li>*/}
       </ul>
     );
   }

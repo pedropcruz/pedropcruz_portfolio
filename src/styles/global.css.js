@@ -44,16 +44,20 @@ injectGlobal`
     
     @keyframes fadeOutUp {
       from {
-        opacity: 1;
+        top:0;
       }
     
       to {
-        opacity: 0;
-        transform: translate3d(0, -100%, 0);
+        top: -500px;
       }
     }
     
     .fadeOutUp {
+      position: absolute;
+      display: block;
+      width: 100%;
+      left:50%;
+      transform: translateX(-50%);
       animation-name: fadeOutUp;
     }
     

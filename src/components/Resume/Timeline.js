@@ -121,7 +121,7 @@ export default class Timeline extends Component {
             //get offsetHeight from h1 element
             let getH1Element = document.querySelector(`div[data-year="${getYearTo}"] h1`).getBoundingClientRect().height;
 
-
+            
             this.getMarkupsFromYears(arrNumberOfYearOnProfession, {
                 getMonthFrom: getMonthFrom,
                 getMonthTo: getMonthTo,
