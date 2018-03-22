@@ -44,16 +44,20 @@ injectGlobal`
     
     @keyframes fadeOutUp {
       from {
-        opacity: 1;
+        top:0;
       }
     
       to {
-        opacity: 0;
-        transform: translate3d(0, -100%, 0);
+        top: -1000px;
       }
     }
     
     .fadeOutUp {
+      position: absolute;
+      display: block;
+      width: 100%;
+      left:50%;
+      transform: translateX(-50%);
       animation-name: fadeOutUp;
     }
     
@@ -61,6 +65,64 @@ injectGlobal`
         animation-duration: 1s;
         animation-fill-mode: both;
     }
-
+    
+    body.ReactModal__Body--open{
+        .overlay{
+          background:${variables.colors.primaryColor};
+           position: fixed;
+           top:0;
+           left:0;
+           right:0;
+           bottom:0;
+           z-index: 20;
+          .overlayModal{
+            height:100%; 
+            ul{
+              display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-direction: column;
+                float: none;
+                text-align: center;
+                height:100%; 
+                li{
+                  display: block;
+                  a{
+                    font: 900 2.3em/2em ${variables.fonts.Montserrat};
+                    color: ${variables.colors.secondaryColor};
+                    text-decoration: none;
+                  }
+                }
+              }
+              a.close{
+                width:45px;
+                height: 45px;
+                background: transparent;
+                border: 0;
+                &:before,
+                &:after{
+                  content:'';
+                  position: absolute;
+                  display: block;
+                  top:50%;
+                  transform: translate(0, 50%);
+                  width: 100%;
+                  height: ${variables.value.bv1};
+                  background: ${variables.colors.secondaryColor};
+                }
+                &:before{
+                  transform: rotate(45deg);
+                }
+                &:after{
+                  transform: rotate(-45deg);
+                }
+                &:hover{
+                  cursor: pointer;
+                }
+              }
+          }
+      }
+    }
+    
 `;
 

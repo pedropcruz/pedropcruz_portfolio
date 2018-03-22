@@ -5,14 +5,7 @@ export default class InputNameVisitor extends Component {
     let formClasses =
       "formName max-width-4 relative mx-auto flex justify-center items-center flex-column animated fadeInDown";
     return (
-      <form
-        action=""
-        className={
-          this.props._showForm
-            ? formClasses
-            : "display-none"
-        }
-      >
+      <form className={this.props._showForm ? this.props.formClass : formClasses}>
         <h1 className="h1 caps">
           Please introduce your name to see some magic!
         </h1>

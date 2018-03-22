@@ -4,16 +4,18 @@ import variables from "../../styles/variables.css";
 const AboutCSS = styled.section`
   color: ${variables.colors.primaryColor};
   h1 {
-    margin-top: 6rem;
     font: 900 1.3em/2em ${variables.fonts.Montserrat};
     @media ${variables.media.sm} {
-      margin-top: 2rem;
       font: 900 3em/1.7em ${variables.fonts.Montserrat};
     }
   }
   form {
-    min-height: 385px;
+    min-height: 477px;
     text-align: center;
+    margin: 0 2em;
+    @media ${variables.media.sm}{
+      margin: 0 auto;
+    }
     h1 {
       font-size: 1.2em;
       letter-spacing: 0;
@@ -68,7 +70,7 @@ const AboutCSS = styled.section`
       text-decoration: none;
       transform: rotate(90deg);
       color: ${variables.colors.primaryColor};
-      z-index: 0;
+      z-index: -1;
       opacity: 0.2;
       @media ${variables.media.sm} {
         left: 45%;

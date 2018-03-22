@@ -10,16 +10,22 @@ export default class About extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      _showForm: props._showForm,
+      formClass: 'display-none'
+    };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleValue = this.handleValue.bind(this);
   }
 
   componentWillMount() {
-    const show = localStorage.getItem(localStorageVariableName) !== null;
+    const show = !!localStorage.getItem(localStorageVariableName);
     this.setState({
       valueName: localStorage.getItem(localStorageVariableName) || "",
       _showForm: !show
     });
+    this.initFormClass();
   }
 
   handleSubmit(e) {
@@ -28,10 +34,18 @@ export default class About extends Component {
       this.setState({
         inputName: this.state.inputName,
         _showForm: false,
+        formClass: "animated fadeOutUp",
         valueName: localStorage.getItem(localStorageVariableName)
       });
       e.preventDefault();
     }
+  }
+
+  initFormClass(){
+    const formClasses = "formName max-width-4 relative mx-auto flex justify-center items-center flex-column animated fadeInDown";
+    this.setState({
+      formClass: ((this.state._showForm)? formClasses : 'display-none')
+    });
   }
 
   handleValue(e) {
@@ -45,9 +59,10 @@ export default class About extends Component {
       <AboutCSS className="relative block">
         <InputNameVisitor
           inputValue={this.state.valueName}
-          _showForm={this.state._showForm}
+          _showForm={!this.state._showForm}
           handleSubmit={this.handleSubmit}
           handleValue={this.handleValue}
+          formClass={this.state.formClass}
         />
         <InputShowAndAboutMe
           role={this.props.role}
@@ -57,7 +72,7 @@ export default class About extends Component {
           valueName={this.state.valueName}
           _showForm={this.state._showForm}
         />
-        <SocialLinks newclass="right-align" />
+        <SocialLinks newclass="right-align mt3" />
       </AboutCSS>
     );
   }

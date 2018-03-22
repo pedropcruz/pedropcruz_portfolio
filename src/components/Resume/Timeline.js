@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import TimelineCSS from "./Timeline.css";
 import Logo from "../../resources/me.svg";
 import ExperienceDATA from "../../resources/ProfessionalExperience";
+import CV_PDF from "../../resources/PedropcruzCV.pdf";
 
 let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Out', 'Nov', 'Dec'],
     __id = Date.now(),
@@ -21,6 +22,8 @@ export default class Timeline extends Component {
         this.positioningMarkups = this.positioningMarkups.bind(this);
         this.getMarkupsFromYears = this.getMarkupsFromYears.bind(this);
         this.calculateHeightForYearElement = this.calculateHeightForYearElement.bind(this);
+        this.timelineOnMobile = this.timelineOnMobile.bind(this);
+
 
         this.state={
             geth1ElementHeight: 0
@@ -121,7 +124,7 @@ export default class Timeline extends Component {
             //get offsetHeight from h1 element
             let getH1Element = document.querySelector(`div[data-year="${getYearTo}"] h1`).getBoundingClientRect().height;
 
-
+            
             this.getMarkupsFromYears(arrNumberOfYearOnProfession, {
                 getMonthFrom: getMonthFrom,
                 getMonthTo: getMonthTo,
@@ -197,6 +200,17 @@ export default class Timeline extends Component {
         Object.assign(job.style, style);
     }
 
+    timelineOnMobile(){
+        return ExperienceDATA.map((exp, i)=>(
+            <div className="timeline__mobile relative py2 my1 mxn3" key={exp.id}>
+                <h1>{exp.role}</h1>
+                <h2><span>{exp.from}</span> - <span>{exp.to}</span></h2>
+                <h3><a href={exp.url}>{exp.company}</a></h3>
+                <a className="link" href={exp.url}>{exp.url}</a>
+            </div>
+        )).reverse();
+    }
+
     render() {
         const description =
             "Join to your team of work, in order to develop my technical and \n" +
@@ -204,25 +218,28 @@ export default class Timeline extends Component {
             "goal together, to offer a service with efficiency and quality.";
 
         return (
-            <TimelineCSS className="col col-7 clearfix timeline" geth1ElementHeight={this.state.geth1ElementHeight}>
-                <div className="col col-3 timeline__image">
+            <TimelineCSS className="col col-12 md-col-7 clearfix timeline" geth1ElementHeight={this.state.geth1ElementHeight}>
+                <div className="col col-12 md-col-3 timeline__image">
                     <figure className="fit block">
                         <picture>
                             <img src={Logo} alt=""/>
                         </picture>
                     </figure>
                 </div>
-                <div className="col col-9 timeline__desc">
+                <div className="col col-12 md-col-9 timeline__desc">
                     <h2 className="h2 m0">Pedro Miguel Pereira da</h2>
                     <h1 className="h1 m0">Cruz</h1>
                     <p className="my3">{description}</p>
-                    <a className="btn p2 inline-block" href="/">
+                    <a className="btn p2 inline-block" href={CV_PDF}>
                         Download CV as PDF
                     </a>
                 </div>
                 <div className="clearfix timeline__grid">
-                    <div className="col col-12">
+                    <div className="sm-col sm-col-12 xs-hide">
                         {this.constructTimeline()}
+                    </div>
+                    <div className="sm-hide md-hide lg-hide col col-12 my3 center">
+                        {this.timelineOnMobile()}
                     </div>
                 </div>
             </TimelineCSS>
