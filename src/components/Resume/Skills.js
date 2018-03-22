@@ -52,7 +52,7 @@ export default class Skills extends Component {
 
   render() {
     return (
-      <SkillsCSS className="col col-4 skills relative">
+      <SkillsCSS className="col col-12 sm-col-4 skills relative">
         <div className="skills__education">
           <h1 className="h1 mb2">Education</h1>
           {this.insertEducationData(EducationDATA)}

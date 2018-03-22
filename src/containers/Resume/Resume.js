@@ -3,7 +3,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import Skills from "../../components/Resume/Skills";
 import Timeline from "../../components/Resume/Timeline";
-import BackgroundAnimated from '../BackgroundAnimated';
+import BackgroundAnimated from '../../components/BackgroundAnimated/BackgroundAnimated';
 
 export default class Resume extends Component {
   render() {

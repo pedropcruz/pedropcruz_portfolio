@@ -3,11 +3,15 @@ import variables from "../../styles/variables.css";
 
 const SkillsCSS = styled.div`
   position: relative;
-  margin: 0 0 0 ${variables.value.bv6};
-  border-left: 5px solid ${variables.colors.primaryColor};
-  padding-left: ${variables.value.bv9};
+  text-align: center;
   margin-bottom: ${variables.value.bv4};
   color: ${variables.colors.primaryColor};
+  @media ${variables.media.sm}{
+    text-align: left;
+    border-left: 5px solid ${variables.colors.primaryColor};  
+    margin: 0 0 0 ${variables.value.bv6};
+    padding-left: ${variables.value.bv9};  
+  }
   h1{
     font:700 ${variables.value.bv6}/${variables.value.bv8} ${variables.fonts.MontserratMedium};
   }

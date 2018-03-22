@@ -12,6 +12,10 @@ const TimelineCSS = styled.div`
     }
     &__desc {
       color: ${variables.colors.primaryColor};
+      text-align: center;
+      @media ${variables.media.sm}{
+        text-align: initial;
+      }
       h2 {
         font: 900 2.25em/normal ${variables.fonts.Montserrat};
       }
@@ -121,6 +125,44 @@ const TimelineCSS = styled.div`
             color: ${variables.colors.primaryColor};
           }
         }
+      }
+    }
+    
+    &__mobile{
+      border-top: 4px solid ${variables.colors.primaryColor};
+      border-bottom: 4px solid ${variables.colors.primaryColor};
+      color: ${variables.colors.primaryColor};
+      &:first-child{
+        border-top: 0;
+      }
+      &:last-child{
+        border-bottom:0;
+      }
+      > * {
+        color: inherit;
+      }
+      h1{
+        font:900 ${variables.value.bv3}/${variables.value.bv6} ${variables.fonts.Montserrat};
+      }
+      h2 span{
+        margin:0 .5em;
+      }
+      h3{
+        font:900 ${variables.value.bv2}/${variables.value.bv8} ${variables.fonts.Montserrat};
+        a{
+          text-decoration: none;
+          color: inherit;
+          background: transparent;
+          transition: all .3s ease-in-out;
+          padding: .5em;
+          &:hover{
+            background: ${variables.colors.primaryColor};
+            color: ${variables.colors.secondaryColor}
+          }
+        }      
+      }
+      a.link{
+        font: 900 ${variables.value.bv2}/${variables.value.bv4} ${variables.fonts.Raleway};
       }
     }
   }

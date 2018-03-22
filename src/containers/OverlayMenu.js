@@ -1,61 +1,76 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import ReactModal from 'react-modal';
+import OverlayCSS from './OverlayMenu.css';
 
 export default class OverlayMenu extends Component {
-  constructor(props) {
-    super(props);
+    constructor() {
+        super();
 
-    this.state = {
-      class: this.props.moreclass,
-      addButton: this.props.button
-    };
+        this.state = {
+            modalIsOpen: false
+        };
 
-    this.closeButton = this.closeButton.bind(this);
-  }
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
 
-  closeButton() {
-    console.log("click!");
-  }
+    openModal() {
+        this.setState({
+            modalIsOpen: true
+        })
+    }
 
-  render() {
-    const classesForNavigation = "list-reset block right ";
-    return (
-      <ul
-        className={
-          this.state.class
-            ? classesForNavigation + this.state.class
-            : classesForNavigation
-        }
-      >
-        {this.state.addButton ? (
-          <li className="inline-block mx2">
-            <a
-              className="close relative mx-auto block mb4"
-              onClick={this.closeButton}
+    closeModal() {
+        this.setState({
+            modalIsOpen: false
+        })
+    }
+
+    render() {
+        //const classesForNavigation = "list-reset block right ";
+        return [
+            <button
+                type="button"
+                onClick={this.openModal}
+                className="md-hide lg-hide inline-block right-align m1 p0">
+                <span className="block col-12"> </span>
+                <span className="block mt1 col-12"> </span>
+                <span className="block mt1 col-12"> </span>
+            </button>,
+            <ReactModal
+                isOpen={this.state.modalIsOpen}
+                onRequestClose={this.closeModal}
+                appElement={document.getElementById('root')}
+                className="overlayModal"
+                overlayClassName="overlay"
             >
-              {" "}
-            </a>
-          </li>
-        ) : (
-          ""
-        )}
-        <li className="inline-block mx2">
-          <Link to="/resume" data-hover="Resume">
-            Resume
-          </Link>
-        </li>
-          {/*TODO: New Components for these pages in the future*/}
-        {/*<li className="inline-block mx2">
-          <Link to="/projects" data-hover="Projects">
-            Projects
-          </Link>
-        </li>
-        <li className="inline-block mx2">
-          <Link to="/contact" data-hover="Contact">
-            Contact
-          </Link>
-        </li>*/}
-      </ul>
-    );
-  }
+                <ul>
+                    <li className="inline-block mx2">
+                        <a
+                            className="close relative mx-auto block mb4"
+                            onClick={this.closeModal}
+                        >
+                        </a>
+                    </li>
+                    <li className="inline-block mx2">
+                        <Link to="/resume" data-hover="Resume">
+                            Resume
+                        </Link>
+                    </li>
+                    {/* TODO: New Components for these pages in the future*/}
+                    {/*<li className="inline-block mx2">
+                          <Link to="/projects" data-hover="Projects">
+                            Projects
+                          </Link>
+                        </li>
+                        <li className="inline-block mx2">
+                          <Link to="/contact" data-hover="Contact">
+                            Contact
+                          </Link>
+                        </li>*/}
+                </ul>
+            </ReactModal>
+        ];
+    }
 }
