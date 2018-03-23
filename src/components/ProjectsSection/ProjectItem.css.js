@@ -3,7 +3,7 @@ import variables from "../../styles/variables.css";
 
 const ProjectItemCSS = styled.article `
     margin: 8rem 2rem;
-    height: 300px;
+    height: 22em;
     border: ${variables.value.bv3} solid ${variables.colors.primaryColor};
     @media ${variables.media.sm}{
       height: 420px;
@@ -82,6 +82,23 @@ const ProjectItemCSS = styled.article `
         background: ${variables.colors.primaryColor};
         @media ${variables.media.sm}{
           margin:2rem 0 0 0;
+        }
+      }
+      &__stack{
+        li{
+          display: block;
+          text-transform: uppercase;
+          margin:0;
+          @media ${variables.media.md}{
+            display: inline-block;
+            margin:0 1em;
+          }
+          &:first-child{
+            margin-left:0;
+          }
+          &:last-child{
+            margin-right: 0;
+          }
         }
       }
     }

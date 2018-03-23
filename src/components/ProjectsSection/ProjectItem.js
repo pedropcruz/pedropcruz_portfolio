@@ -12,12 +12,21 @@ export default class ProjectItem extends Component {
             name: this.props.projectName,
             url: this.props.projectUrl,
             images: this.props.projectImages,
-            texts: this.props.text
+            texts: this.props.text,
+            tech: this.props.stack
         };
 
         this.pad = this.pad.bind(this);
+        this.technologieStack = this.technologieStack.bind(this);
     }
 
+    technologieStack(){
+        const techStack = this.state.tech;
+
+        return techStack.map((stack, i)=>(
+            <li key={i} className={"techStack_" + stack}>{stack}</li>
+        ));
+    }
 
     pad = (num, width, z) => {
         z = z || '0';
@@ -40,7 +49,11 @@ export default class ProjectItem extends Component {
                     <div className="project-item--details absolute block col-12">
                         <h1 className="project-item--details__name">{this.state.name}</h1>
                         <p className="project-item--details__lead col-7">{this.state.texts.lead}</p>
-                        <a href={this.state.url} className="project-item--details__linkProject block mt3"> </a>
+                        {/* TODO: In Future, add pages for every single project */}
+                        {/*<a href={this.state.url} className="project-item--details__linkProject block mt3"> </a>*/}
+                        <ul className="list-reset block project-item--details__stack py2 ">
+                            {this.technologieStack()}
+                        </ul>
                     </div>
                 </span>
             </ProjectItemCSS>

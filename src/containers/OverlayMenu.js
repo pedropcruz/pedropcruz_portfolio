@@ -28,38 +28,36 @@ export default class OverlayMenu extends Component {
     }
 
     render() {
-        //const classesForNavigation = "list-reset block right ";
-        return [
-            <button
-                type="button"
-                onClick={this.openModal}
-                className="md-hide lg-hide inline-block right-align m1 p0">
-                <span className="block col-12"> </span>
-                <span className="block mt1 col-12"> </span>
-                <span className="block mt1 col-12"> </span>
-            </button>,
-            <ReactModal
-                isOpen={this.state.modalIsOpen}
-                onRequestClose={this.closeModal}
-                appElement={document.getElementById('root')}
-                className="overlayModal"
-                overlayClassName="overlay"
-            >
-                <ul>
-                    <li className="inline-block mx2">
-                        <a
-                            className="close relative mx-auto block mb4"
-                            onClick={this.closeModal}
-                        >
-                        </a>
-                    </li>
-                    <li className="inline-block mx2">
-                        <Link to="/resume" data-hover="Resume">
-                            Resume
-                        </Link>
-                    </li>
-                    {/* TODO: New Components for these pages in the future*/}
-                    {/*<li className="inline-block mx2">
+        return (
+            <div>
+                <button
+                    type="button"
+                    onClick={this.openModal}
+                    className="md-hide lg-hide inline-block right-align m1 p0">
+                    <span className="block col-12"> </span>
+                    <span className="block mt1 col-12"> </span>
+                    <span className="block mt1 col-12"> </span>
+                </button>
+                <ReactModal
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                    appElement={document.getElementById('root')}
+                    className="overlayModal"
+                    overlayClassName="overlay"
+                >
+                    <ul>
+                        <li className="inline-block mx2">
+                            <a className="close relative mx-auto block mb4"
+                               onClick={this.closeModal}>
+                            </a>
+                        </li>
+                        <li className="inline-block mx2">
+                            <Link to="/resume" data-hover="Resume">
+                                Resume
+                            </Link>
+                        </li>
+                        {/* TODO: New Components for these pages in the future*/}
+                        {/*<li className="inline-block mx2">
                           <Link to="/projects" data-hover="Projects">
                             Projects
                           </Link>
@@ -69,8 +67,9 @@ export default class OverlayMenu extends Component {
                             Contact
                           </Link>
                         </li>*/}
-                </ul>
-            </ReactModal>
-        ];
+                    </ul>
+                </ReactModal>
+            </div>
+        );
     }
 }

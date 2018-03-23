@@ -23,6 +23,7 @@ export default class ProjectsSection extends Component {
                          projectUrl={item.url}
                          projectImages={item.images}
                          text={item.text}
+                         stack={item.tech.stack}
             />
         ));
     };

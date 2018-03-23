@@ -1,18 +1,18 @@
 [
     {
         "status": "Coding",
-        "level": 1
+        "level": 6
     },
     {
         "status": "Creativity",
-        "level": 2
+        "level": 8
     },
     {
         "status": "Eye for detail",
-        "level": 3
+        "level": 7
     },
     {
         "status": "Communication Skills",
-        "level": 4
+        "level": 5
     }
 ]

@@ -2,6 +2,31 @@
   {
     "_id": 1,
     "number": 1,
+    "name": "Pedropcruz Portfolio",
+    "url": "/",
+    "images": {
+      "big": "../img/pedropcruz_portfolio/pedropcruz_portfolio_big.png",
+      "medium": "cenasMEDIUM.jpg",
+      "small": "cenasSMALL.jpg",
+      "logo": "cenasLOGO.jpg"
+    },
+    "text": {
+      "lead": "My own Portfolio designed and mantained by himself. You can check as a github project and see if its cool for you. Feedbacks are very welcome."
+    },
+    "tech": {
+      "stack": [
+        "Illustrator CC",
+        "React",
+        "styled components",
+        "basscss",
+        "yarn",
+        "IntellijIDEA"
+      ]
+    }
+  },
+  {
+    "_id": 2,
+    "number": 2,
     "name": "Sporting Clube de Portugal eSports",
     "url": "/sporting",
     "images": {
@@ -12,11 +37,22 @@
     },
     "text": {
       "lead": "Portuguese Football team with a new division about the eSports planet. I made the design and code the visual."
+    },
+    "tech": {
+      "stack": [
+        "Illustrator CC",
+        "Angular",
+        "LESS",
+        "Bootstrap",
+        "Javascript",
+        "VScode",
+        "Grunt"
+      ]
     }
   },
   {
-    "_id": 2,
-    "number": 2,
+    "_id": 3,
+    "number": 3,
     "name": "Jah Moment Portugal",
     "url": "/jahmoment",
     "images": {
@@ -27,11 +63,21 @@
     },
     "text": {
       "lead": "Personal Project but never have been concluded, a Portuguese web radio about the Reggae and derivated styles."
+    },
+    "tech": {
+      "stack": [
+        "Illustrator CC",
+        "HTML5",
+        "SASS",
+        "Bootstrap",
+        "Javascript",
+        "Sublime"
+      ]
     }
   },
   {
-    "_id": 3,
-    "number": 3,
+    "_id": 4,
+    "number": 4,
     "name": "itzone",
     "url": "/itzone",
     "images": {
@@ -42,6 +88,15 @@
     },
     "text": {
       "lead": "Personal Project about community forums. The main idea it was restyle the old view about forums."
+    },
+    "tech": {
+      "stack": [
+        "Illustrator",
+        "HTML5",
+        "SASS",
+        "Bootstrap",
+        "VSCode"
+      ]
     }
   }
 ]
