@@ -3,8 +3,6 @@ import Header from "./Header";
 import About from "./Home/About";
 import ProjectsSection from "./Home/ProjectsSection";
 import Footer from "./Footer";
-import OverlayMenu from "./OverlayMenu";
-import OverlayMenuCSS from "./OverlayMenu.css";
 import BackgroundAnimated from "../components/BackgroundAnimated/BackgroundAnimated";
 import roles from '../resources/roles';
 import {Player} from "./Home/Player";
