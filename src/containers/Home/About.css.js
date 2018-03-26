@@ -104,11 +104,18 @@ const AboutCSS = styled.section`
         a {
           color: ${variables.colors.primaryColor};
           text-decoration: none;
+          letter-spacing: 0.1em;
+          cursor: pointer;
+          opacity: .7;
+          transition: opacity .3s;
           @media ${variables.media.sm} {
             margin: 0 2vw;
           }
           @media ${variables.media.lg} {
-            margin: 0 3.5vw;
+            margin: 0 3vw;
+          }
+          &:hover{
+            opacity: 1;
           }
           &:focus {
             outline: 0;
