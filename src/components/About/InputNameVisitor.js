@@ -7,7 +7,7 @@ export default class InputNameVisitor extends Component {
     return (
       <form className={this.props._showForm ? this.props.formClass : formClasses}>
         <h1 className="h1 caps">
-          Please introduce your name to see some magic!
+          Please type your name to see some magic!
         </h1>
         <input
           type="text"
