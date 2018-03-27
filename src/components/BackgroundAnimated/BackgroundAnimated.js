@@ -46,6 +46,8 @@ export default class BackgroundAnimated extends Component {
 
     componentWillUnmount() {
         this.stopLoop();
+        clearTimeout(this.timer);
+        clearInterval(this.timerInterval);
     }
 
     LoadSolidTypes() {
