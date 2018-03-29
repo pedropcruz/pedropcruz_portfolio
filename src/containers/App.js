@@ -12,8 +12,7 @@ class App extends Component {
     const aboutText = {
       text:
         "I like to be involved not only in the UX/UI but also in the JS layers below. \n" +
-        "I'm a tinkerer, a jack of all trades, who spends the night dreaming on the \n" +
-        "next big thing."
+        "I'm a curious mind by nature. My nights are spent dreaming of the next big thing."
     };
 
     return (

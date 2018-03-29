@@ -25,7 +25,7 @@ export default class Timeline extends Component {
         this.timelineOnMobile = this.timelineOnMobile.bind(this);
 
 
-        this.state={
+        this.state = {
             geth1ElementHeight: 0
         }
     }
@@ -88,7 +88,8 @@ export default class Timeline extends Component {
 
     createMarkup(data) {
         let markups = data.map((job, i) => (
-            <div key={i} from={job.from} to={job.to} className="timeline__graph--markups__job px3 ml3 flex flex-column justify-center">
+            <div key={i} from={job.from} to={job.to}
+                 className="timeline__graph--markups__job px3 ml3 flex flex-column justify-center">
                 <h1 className="h1">{job.role}</h1>
                 <p>Dates: {job.from.split('-').join('.')} - {(job.to === 'PRESENT') ? job.to : job.to.split('-').join('.')}</p>
                 <p>Company: {job.company}</p>
@@ -124,7 +125,7 @@ export default class Timeline extends Component {
             //get offsetHeight from h1 element
             let getH1Element = document.querySelector(`div[data-year="${getYearTo}"] h1`).getBoundingClientRect().height;
 
-            
+
             this.getMarkupsFromYears(arrNumberOfYearOnProfession, {
                 getMonthFrom: getMonthFrom,
                 getMonthTo: getMonthTo,
@@ -172,11 +173,11 @@ export default class Timeline extends Component {
 
         if (arrData.length !== 1 && arrData.length >= 3) {
             arrWithTime = arrFromStart.concat(arrWithNoStartOrEndTime, arrUntilEnd);
-        } else if(arrData.length === 1){
+        } else if (arrData.length === 1) {
             $findYear = document.querySelector(`div[data-year="${arrData[0]}"]`);
             arrWithTime = [].slice.call($findYear.children).slice(0, -1).reverse()
-                .slice(months.indexOf(getMonthFrom), months.indexOf(getMonthTo)+1);
-        }else{
+                .slice(months.indexOf(getMonthFrom), months.indexOf(getMonthTo) + 1);
+        } else {
             arrWithTime = arrFromStart.concat(arrUntilEnd);
         }
 
@@ -184,11 +185,11 @@ export default class Timeline extends Component {
 
     }
 
-    calculateHeightForYearElement(markupRolesArray, job, $h1ElementHeight){
+    calculateHeightForYearElement(markupRolesArray, job, $h1ElementHeight) {
         let $getYearHeightElement = 0;
         markupRolesArray.forEach((e) => {
             $getYearHeightElement = $getYearHeightElement + e.getBoundingClientRect().height;
-            if(e.getAttribute("data-month") === "Jan"){
+            if (e.getAttribute("data-month") === "Jan") {
                 $getYearHeightElement = $getYearHeightElement - e.getBoundingClientRect().height + $h1ElementHeight;
             }
         });
@@ -200,8 +201,8 @@ export default class Timeline extends Component {
         Object.assign(job.style, style);
     }
 
-    timelineOnMobile(){
-        return ExperienceDATA.map((exp, i)=>(
+    timelineOnMobile() {
+        return ExperienceDATA.map((exp, i) => (
             <div className="timeline__mobile relative py2 my1 mxn3" key={exp.id}>
                 <h1>{exp.role}</h1>
                 <h2><span>{exp.from}</span> - <span>{exp.to}</span></h2>
@@ -213,12 +214,13 @@ export default class Timeline extends Component {
 
     render() {
         const description =
-            "Join to your team of work, in order to develop my technical and \n" +
-            "Professional skills, to grow close to you in order to achieve a \n" +
-            "goal together, to offer a service with efficiency and quality.";
-
+            "I’m available for joining your work team, where I know I can further grow " +
+            "my technical and professional skills while helping you reach your goals as " +
+            "a team. Dedication, expertise, efficiency, and lineament. What else do you " +
+            "really need?";
         return (
-            <TimelineCSS className="col col-12 md-col-7 clearfix timeline" geth1ElementHeight={this.state.geth1ElementHeight}>
+            <TimelineCSS className="col col-12 md-col-7 clearfix timeline"
+                         geth1ElementHeight={this.state.geth1ElementHeight}>
                 <div className="col col-12 md-col-3 timeline__image">
                     <figure className="fit block">
                         <picture>
