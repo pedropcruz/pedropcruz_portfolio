@@ -25,5 +25,5 @@ yarn-error.log*
 *iml
 .idea
 *.vscode
-yarn.lock
+package-lock.json
 
