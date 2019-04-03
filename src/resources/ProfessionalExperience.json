@@ -27,8 +27,16 @@
     "id": "4",
     "role": "Front-End Developer",
     "from": "05-2016",
-    "to": "PRESENT",
+    "to": "10-2018",
     "company": "Grupo Impresa Publishing, Lda",
     "url": "https://www.impresa.pt"
-  }
+	},
+	{
+    "id": "5",
+    "role": "Software Engineer",
+    "from": "11-2018",
+    "to": "02-2019",
+    "company": "diconium digital solutions",
+    "url": "https://diconium.com/"
+	}
 ]
