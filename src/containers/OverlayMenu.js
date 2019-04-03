@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import ReactModal from 'react-modal';
-import OverlayCSS from './OverlayMenu.css';
 
 export default class OverlayMenu extends Component {
     constructor() {
